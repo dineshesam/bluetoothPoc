@@ -76,8 +76,8 @@ jobs:
 
       - name: Build iOS App
         run: |
-          xcodebuild -workspace ios/MyApp.xcworkspace \
-                     -scheme MyApp \
+          xcodebuild -workspace ios/TempProject.xcworkspace \
+                     -scheme TempProject \
                      -sdk iphoneos \
                      -configuration Release \
                      -derivedDataPath ios/build \
@@ -87,7 +87,7 @@ jobs:
         run: |
           mkdir -p ios/build/ipa
           xcodebuild -exportArchive \
-                     -archivePath ios/build/MyApp.xcarchive \
+                     -archivePath ios/build/TempProject.xcarchive \
                      -exportPath ios/build/ipa \
                      -exportOptionsPlist ios/exportOptions.plist \
                      -allowProvisioningUpdates
