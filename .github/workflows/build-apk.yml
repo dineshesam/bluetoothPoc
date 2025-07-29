@@ -51,12 +51,7 @@ jobs:
         run: |
           rm -rf node_modules package-lock.json yarn.lock
           npm install  # Explicitly using npm instead of yarn
-      - name: Install Missing Dependencies
-        run: |
-          npm install @react-navigation/native
-          npm install react-native-screens react-native-safe-area-context
-          npm install react-native-gesture-handler react-native-reanimated
-          npm install react-native-vector-icons react-native-paper
+      -
       - name: Reset Metro Bundler Cache
         run: npx react-native start --reset-cache & sleep 5; exit 0
 
